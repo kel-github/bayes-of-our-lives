@@ -8,12 +8,12 @@ mod_string = " model {
     y[i] ~ dnorm(mu, 1.0/sig2) 
   }
   mu ~ dt(0.0, 1.0/1.0, 1)
-  sig2 = 1.0
+  sig2 = 0.5
 } "
 
 # 2. set up the model
 set.seed(42)
-y <- rnorm(10, 1, 2)
+y <- c(-0.2, -1.5, -5.3, 0.3, -0.8, -2.2)
 n = length(y)
 
 data_jags = list(y=y, n=n)
