@@ -95,7 +95,8 @@ summary(mod_csim)
 dic1=dic.samples(mod, n.iter=1e3)
 dic2=dic.samples(mod2, n.iter=1e3)
 
-dic_diff = dic1 - dic2
+
+ = dic1 - dic2
 
 # Use the original model (single variance) to calculate a 95% interval of highest posterior density (HPD) for μ3−μ1 \mu_3 - \mu_1 μ3−μ1. Which of the following is closest to this interval?
 meandiff = mod_csim[,3] - mod_csim[,1]
